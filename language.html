@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />    
+    <title>PerLa - PerLa Language</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />    
+    <script type="text/javascript" src="scripts/menu.js"></script>
+  </head>
+  
+  <body>
+    
+    <!-- INIZIO CONTAINER -->       
+    <div class="container">
+  
+      <!-- INIZIO TESTATA -->
+      <div class="header">
+          
+        <!-- Mappa per i loghi -->
+        <map name="map_loghi" id="map_loghi">
+          <area shape="rect"   coords="50,50,245,170" href="index.html"   target="_self"  alt="PerLa Project" />
+          <area shape="circle" coords="726,75,47"     href="http://www.polimi.it" target="_blank" alt="Politecnico di Milano" />
+        </map>
+        
+        <!-- Immagine di testata -->
+        <img class="headerImage" src="images/general/testata.png" alt="" usemap="#map_loghi" border="0" />
+            
+        <!-- Titolo del progetto -->
+        <div class="headerTitle">
+          PerLa Project
+        </div>
+            
+        <!-- Sottotitolo del progetto -->
+        <div class="headerSubTitle">
+          "Declarative language and middleware
+          <br />
+          for pervasive systems"
+        </div>
+        
+        <!-- Menu -->
+        <div class="headerMenu">
+          <ul class="headerMenuUl">
+        
+            <!-- PerLa -->
+            <li class="headerMenuLi" onmouseover="showMenu(1);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem1">PerLa Project</span>
+              <ul class="headerSubMenuUl" id="menuList1">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="language.html">Language</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="middleware.html">Middleware</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="http://hoc13.elet.polimi.it/project_perla/" target="_blank">Video</a>
+                </li>
+              </ul>
+            </li>
+          
+            <!-- Doocumentation -->
+            <li class="headerMenuLi" onmouseover="showMenu(2);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem2">Documentation</span>
+              <ul class="headerSubMenuUl" id="menuList2">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="papers.html">Papers</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="reports.html">Reports</a>
+                </li>
+              </ul>
+            </li>
+              
+            <!-- Thesis -->
+            <li class="headerMenuLi" onmouseover="showMenu(3);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem3">Projects &amp; Thesis</span>
+              <ul class="headerSubMenuUl" id="menuList3">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="availableProjects.html">Available works</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="completedProjects.html">Completed works</a>
+                </li>
+              </ul>
+            </li>            
+                  
+            <!-- People -->
+            <li class="headerMenuLi" onmouseover="showMenu(4);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem4">People</span>
+              <ul class="headerSubMenuUl" id="menuList4">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="staff.html">Staff</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="collaborators.html">Collaborators</a>
+                </li>
+              </ul>                
+            </li>
+          
+            <!-- Events -->
+            <li class="headerMenuLi" onmouseover="showMenu(5);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem5">Events</span>
+              <ul class="headerSubMenuUl" id="menuList5">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="pastEvents.html">Past events</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="incomingEvents.html">Incoming events</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+      <!-- FINE TESTATA -->
+      </div>
+      
+      <!-- INIZIO CONTENUTI -->
+      <div class="contentsPadded">
+
+        <div class="title">PerLa language</div>
+
+        <div class="paragraph paragraphJustified">
+          <span class="text textNormal">
+          
+
+There are many real word applications that are continuously monitored using a large number of heterogeneous sensing devices. Different kinds of sensors, both in terms of technology and functionality, are often simultaneously used within the same application.In the following we refer, as a motivating example, to the automation of a large wine production farm, from the vineyard to the table - one of the case studies in the ART DECO project, a large project funded by the Italian University Ministry. The process has to be completely monitored, starting from the growing in the vineyard to the transport and the bottles maintenance in the wine cellars. A specific monitoring system is required for each of the previous phases: Wireless Sensor Networks can be the best technology to sense useful vineyard parameters, like temperature and humidity; bottles identification and tracing can be performed applying to them an RFID tag; finally, GPS devices allow to monitor the current location of the trucks involved in the wine transport process.The integration of data collected using the various technologies is certainly an interesting challenge, but the different interfaces provided to control and query each involved kind of device make this goal very hard to achieve.The project presented in this brochure aims at analysing the described problem and suggests a possible solution: the main idea is the definition of a declarative high level language that allows to query a pervasive system, hiding the difficulties related to the need of handling different technologies.The expression "pervasive system" refers to a large heterogeneous network composed of many devices, belonging to different technologies, like wireless sensors networks (WSN), RFID systems, GPS and other kinds of sensors.We aim at providing a database like abstraction of the whole network in order to hide the high complexity of low level programming and allowing users to retrieve data from the system and configure/activate sensors in a fast and easy way.In the following we list the main aspects that have been considered during the design phase of PERLA language:
+            <ul class="textUl">
+              <li class="textLi">
+                Data representation and abstraction
+              </li>
+              <li class="textLi">
+                Physical devices management
+              </li>
+              <li class="textLi">
+                Functional language features
+              </li>             
+              <li class="textLi">               Non Functional language features
+              </li>
+            </ul>
+
+Analyzing the previous requirements and taking into account the large heterogeneity of the considered devices, we decided to split the language into two levels:A LOW LEVEL LANGUAGE, that allows to precisely define the behaviour of a single device. The main role of a low level statement is to define the sampling operations, but also to allow the application of some SQL operators (grouping, aggregation, filtering) on sampled data.A HIGH LEVEL LANGUAGE, that allows to define data manipulation over the streams coming from low level queries.Both languages have an SQL like syntax, but the low level language semantics is quite different with respect to the standard SQL one: in fact, specific clauses have been introduced to manage sampling operations. Moreover, the language has been designed to make the aggregation of sampled data easier. On the contrary, the high level language semantics is very similar to that of streaming databases.The definition of the language semantics is based on the concept of logical object. This is an abstraction of physical devices that allows application objects to interact with the hardware, through the definition of a suitable interface. Each logical object wraps a single or a homogeneous aggregate of physical devices.At the application layer, a query analyzer handles user submitted queries and retrieves the list of logical objects composing the system, using a specific component (REGISTRY). This information is then used to select the logical objects that will take part in the query. The described architecture allows to abstract the whole pervasive system as a collection of logical objects. In this way, each request submitted to a node can be thought as a request to the corresponding logical object, through the exposed interface. The precise definition of this interface allows to describe the language semantics as a set of interactions between the query executor and the logical objects. As an example, from the language point of view, a sampling request to a node having a temperature sensor on board is abstracted as an attribute reading from the node interface. Similarly, when an RFID tag is sensed by a certain RFID reader, the language detects an event fired by the logical object wrapping the tag.The interface a logical object should expose to be involved in the query execution process include the following functionalities:RETRIEVING ATTRIBUTES. Attributes can be used to retrieve both the state of the node and the sampled data. An attribute can be the abstraction of a sampled value, of a cached one or a constant. Attributes can be classified in three categories:STATIC ATTRIBUTES: represent constant values describing the characteristics of the node (e.g.: type of the node, maximum sampling rate, etc). These values don't change during the logical object lifecycle.PROBING DYNAMIC ATTRIBUTES: when an object tries to retrieve this kind of fields, the logical object must refer to the physical device to produce the value before returning it. Probing attributes can be mapped on a real sensor (e.g.: temperature, pressure, etc) or on a memory area (e.g.: information stored in a device RAM, ROM, flash, etc). Note that dynamic attributes also include policies whose value must be sampled whenever required (e.g.: battery level).NON PROBING DYNAMIC ATTRIBUTES: when an object tries to retrieve this kind of fields, the logical object returns a local cached value without dealing with the physical device. The cached value is periodically updated by the logical object.FIRING NOTIFICATION EVENTS. Some operations defined in the declarative language are activated after an event is risen. Thus, the logical object interface must be able to fire some events coming from physical devices (e.g when an RFID reader senses an RFID tag).GETTING THE LIST OF SUPPORTED ATTRIBUTES AND EVENTS. A function is provided to allow the query analyzer to discover if a logical object supports a certain attribute. That function also provides the type of a given attribute, both in terms of data type (integer, string, etc) and attribute type (static, probing or not probing).
+<br>
+<img src="images/general/queryExample.png" alt=""style="float:center; padding: 10px 40px 10px 0px;"/>
+        </div>      
+      
+        
+        
+        
+        <div class="paragraph paragraphRight">
+          <span class="text textEmph">
+            <br />
+            <a class="link" href="files/documentation/perla_language.pdf" target="_blank">Download</a> the full language executive summary
+            <a class="link" href="files/documentation/perla_language.pdf" target="_blank"><img class="image" src="images/general/pdf_small.png" alt="" /></a>
+          </span>
+        </div>
+
+      <!-- FINE CONTENUTI -->
+      </div>
+      
+      <!-- INIZIO FOOTER -->
+      <div class="footer">
+      
+        <div class="footerMenu">
+          <ul class="footerMenuUl">
+                      
+            <!-- Contatti -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="contacts.html" target="_self">Contacts</a>
+            </li>
+            
+            <!-- Sponsor -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="relatedProjects.html" target="_self">Related Projects</a>
+            </li>
+            
+            <!-- W3C Valid -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="http://validator.w3.org/check?uri=http://perlawsn.sourceforge.net/language.html" target="_blank">Valid XHTML</a>
+            </li>
+            
+            <!-- CSS Valid -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="http://jigsaw.w3.org/css-validator/validator?uri=http://perlawsn.sourceforge.net/styles/styles.css" target="_blank">Valid CSS</a>
+            </li>
+                        
+          </ul>
+        </div>
+
+      <!-- FINE FOOTER -->
+      </div>
+    
+    <!-- FINE CONTAINER --> 
+    </div>
+  
+    
+  </body>
+</html>
+

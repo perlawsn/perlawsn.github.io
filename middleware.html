@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />    
+    <title>PerLa - PerLa Middleware</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />    
+    <script type="text/javascript" src="scripts/menu.js"></script>
+  </head>
+  
+  <body>
+    
+    <!-- INIZIO CONTAINER -->       
+    <div class="container">
+  
+      <!-- INIZIO TESTATA -->
+      <div class="header">
+          
+        <!-- Mappa per i loghi -->
+        <map name="map_loghi" id="map_loghi">
+          <area shape="rect"   coords="50,50,245,170" href="index.html"   target="_self"  alt="PerLa Project" />
+          <area shape="circle" coords="726,75,47"     href="http://www.polimi.it" target="_blank" alt="Politecnico di Milano" />
+        </map>
+        
+        <!-- Immagine di testata -->
+        <img class="headerImage" src="images/general/testata.png" alt="" usemap="#map_loghi" border="0" />
+            
+        <!-- Titolo del progetto -->
+        <div class="headerTitle">
+          PerLa Project
+        </div>
+            
+        <!-- Sottotitolo del progetto -->
+        <div class="headerSubTitle">
+          "Declarative language and middleware
+          <br />
+          for pervasive systems"
+        </div>
+        
+        <!-- Menu -->
+        <div class="headerMenu">
+          <ul class="headerMenuUl">
+        
+            <!-- PerLa -->
+            <li class="headerMenuLi" onmouseover="showMenu(1);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem1">PerLa Project</span>
+              <ul class="headerSubMenuUl" id="menuList1">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="language.html">Language</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="middleware.html">Middleware</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="http://hoc13.elet.polimi.it/project_perla/" target="_blank">Video</a>
+                </li>
+              </ul>
+            </li>
+          
+            <!-- Doocumentation -->
+            <li class="headerMenuLi" onmouseover="showMenu(2);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem2">Documentation</span>
+              <ul class="headerSubMenuUl" id="menuList2">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="papers.html">Papers</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="reports.html">Reports</a>
+                </li>
+              </ul>
+            </li>
+              
+            <!-- Thesis -->
+            <li class="headerMenuLi" onmouseover="showMenu(3);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem3">Projects &amp; Thesis</span>
+              <ul class="headerSubMenuUl" id="menuList3">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="availableProjects.html">Available works</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="completedProjects.html">Completed works</a>
+                </li>
+              </ul>
+            </li>            
+                  
+            <!-- People -->
+            <li class="headerMenuLi" onmouseover="showMenu(4);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem4">People</span>
+              <ul class="headerSubMenuUl" id="menuList4">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="staff.html">Staff</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="staff.html">Collaborators</a>
+                </li>
+              </ul>                
+            </li>
+          
+            <!-- Events -->
+            <li class="headerMenuLi" onmouseover="showMenu(5);" onmouseout="showMenu(0);">
+              <span class="headerMenuSpan" id="menuItem5">Events</span>
+              <ul class="headerSubMenuUl" id="menuList5">
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="pastEvents.html">Past events</a>
+                </li>
+                <li class="headerSubMenuLi">
+                  <a class="headerMenuA" href="incomingEvents.html">Incoming events</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+      <!-- FINE TESTATA -->
+      </div>
+      
+      <!-- INIZIO CONTENUTI -->
+      <div class="contentsPadded">
+
+        <div class="title">PerLa middleware</div>
+
+        <div class="paragraph paragraphJustified">
+          <span class="text textNormal">
+            The goal of the middleware is to provide an abstraction for each device in terms of logical objects 
+            and to support the execution of <span class="textBold">PerLa</span> queries. During the design of 
+            the middleware, we tried to make the definition and the addition of new devices easier. We also 
+            tried to minimize the amount of low level code the user has to write to make the new device recognizable 
+            by the middleware.
+          </span>
+        </div>
+
+        <div class="paragraph paragraphJustified">
+          <div class="text textNormal">
+            <span class="textBold">PerLa</span> system is basically composed of three components:
+            
+            <ul class="textUl">
+              <li class="textLi">
+                The <span class="textBold">NODES</span> are heterogeneous devices equipped with 
+                sensors, able to collect data and to send them in the network managed by the 
+                middleware. Nodes can either be very simple devices (such as <span class="textEmph">
+                RFID tags</span> or <span class="textEmph">WSN nodes</span> such as 
+                <span class="textEmph">MOTES</span>) or more complex devices (such as palms, portable 
+                computers or ad hoc boards).
+              </li>
+              <li class="textLi">
+                The <span class="textBold">MIDDLEWARE</span> is a stack of software layers  providing 
+                a high level abstraction of each node (called <span class="textEmph">
+                LOGICAL OBJECT</span>). The middleware also implements a set of functionalities to allow 
+                communications among logical objects and to manage devices that enter and leave the 
+                system (following a <span class="textEmph">"Plug and Play"</span> behaviour).
+              </li>
+              <li class="textLi">
+                The <span class="textBold">LANGUAGE</span> is an <span class="textEmph">SQL like</span> 
+                language designed to allow the querying of a pervasive system as it were a database. 
+                The goal of the language is to enable the final user to collect data in a fast and 
+                easy way, without dealing with low level programming issues.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="paragraph paragraphJustified">
+          <div class="text textNormal">
+            The middleware is composed of the following layers:
+
+            <ul class="textUl">
+              <li class="textLi">
+                <span class="textBold">LANGUAGE PARSER.</span> It receives textual queries as input, 
+                verifies their syntax and transforms them in a suitable format for distribution and 
+                execution.
+              </li>
+              <li class="textLi">
+                <span class="textBold">LOGICAL OBJECT REGISTRY.</span> It is the component that 
+                maintains the list of the logical objects currently registered in the system. It is 
+                also used to find the set of logical objects that will be involved in the execution 
+                of a certain low level query.
+              </li>
+              <li class="textLi">
+                <span class="textBold">HIGH LEVEL QUERY EXECUTOR.</span> Basically, it is a data 
+                streaming management systems (<span class="textEmph">DSMS</span>).
+              </li>
+              <li class="textLi">
+                <span class="textBold">LOW LEVEL SOFTWARE.</span> This software layer adapts the 
+                different physical devices to the middleware. It also provides the abstraction of 
+                logical objects. We decided to implement the whole software, from the logical objects 
+                layer up, using <span class="textEmph">JAVA</span> technology. We also assumed that 
+                each logical object (that we can now consider as a <span class="textEmph">JAVA</span>
+                remote object) is reachable via <span class="textEmph">TCP/IP</span>.
+                If the physical device is connected to a different network (e.g. a 
+                <span class="textEmph">CAN-BUS</span> channel), the correspondent logical object will
+                be instantiated on the nearest device equipped with both a 
+                <span class="textBold">JAVA Virtual Machine</span> and a 
+                <span class="textBold">TCP/IP connection</span> to the network managed by the 
+                middleware. This middleware layer implements the communication protocol between the 
+                logical object and the physical device.
+              </li>
+
+              <li class="textLi">
+                <span class="textBold">LOW LEVEL QUERY EXECUTOR.</span> This is a <span class="textEmph">
+                JAVA</span> component, contained in each logical object, whose goal is to receive and 
+                execute a parsed low level query.
+              </li>
+            </ul>   
+          </div>
+        </div>
+    
+        <div style="text-align: center; padding: 0px 0px 10px 0px;">
+          <img src="images/general/middleware.png" alt="" />
+        </div>
+
+        <div class="bigParagraph paragraphJustified">
+          <div class="text textNormal">     
+            Basically, the middleware exposes two interfaces to the final user:
+  
+            <ul class="textUl">
+              <li class="textLi">
+                <span class="textBold">APPLICATION LEVEL INTERFACE.</span> It provides methods to 
+                submit textual <span class="textEmph">PERLA</span> queries and to receive the
+                              results of executed queries. A precise definition of the interaction model between 
+                the user and the middleware has not been established yet; probably, two socket channels 
+                will be provided: the first one will be used to receive queries, while the second one 
+                will return produced records.
+              </li>
+              <li class="textLi">
+                              <span class="textBold">PHYSICAL LEVEL INTERFACE.</span> The goal of this interface is 
+                to allow the user to integrate a new device into the system. It is basically a 
+                <span class="textEmph">C</span> library, that should be extended and recompiled 
+                whenever a new device should be integrated in the system. We tried to minimize the low 
+                level programming effort by the user to integrate a new technology in the middleware. 
+                To reach this goal we defined the structure of a <span class="textEmph">XML file</span> 
+                that should be generated for each new device. This file contains a full description of 
+                device in terms of:
+                
+                <ul class="textUl">
+                  <li class="textLi">
+                    available sensors
+                  </li>
+                  <li class="textLi">
+                    measures that can be sampled
+                  </li>
+                  <li class="textLi">
+                    communication protocol between the device and its logical 
+                    object (e.g. structure of exchanged packets).
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="paragraph paragraphJustified">
+          <div class="text textNormal">
+            The figure highlights the interaction between a physical node and the middleware:
+          
+            <img src="images/general/middleware2.png" alt="" style="float:left; padding: 0px 40px 0px 0px;"/>
+            <ul class="textUl">
+              <li class="textLi">
+                <span class="textBold">(A)</span> is the physical device equipped with sensors, 
+                where the user <span class="textEmph">C code</span> is executed.
+              </li>
+              <li class="textLi">
+                <span class="textBold">(B)</span> is the embedded board or PC placed nearest to 
+                <span class="textBold">(A)</span> and having an environment where the logical object 
+                can be hosted (i.e. <span class="textBold">(B)</span> must execute a 
+                <span class="textEmph">JAVA Virtual Machine</span> and must be connected to the 
+                middleware via <span class="textEmph">TCP/IP</span>).
+              </li>
+              <li class="textLi">
+                <span class="textBold">(C)</span> is the server where the logical objects registry 
+                is executed.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="paragraph paragraphJustified">
+          <span class="text textNormal">
+            Communications between <span class="textBold">(B)</span> and <span class="textBold">(C)</span> are 
+            completely managed by the middleware, while communications between <span class="textBold">(A)</span> 
+            and <span class="textBold">(B)</span> (that can be performed over a non <span class="textEmph">TCP/IP
+            </span> channel, such as a <span class="textEmph">CAN-BUS</span> or serial channel) is only indirectly 
+            managed by the middleware. In fact, the <span class="textEmph">XML self-description file</span> 
+            presented above defines the parameters and the messages of the communication, that is performed executing 
+            some code contained in the <span class="textEmph">C</span> library.
+            It is worth to notice that the presented scenario is the most general one, but <span class="textBold">(B)
+            </span> and <span class="textBold">(C)</span> components can be hosted on the same physical device when 
+            it is powerful enough.
+          </span>
+        </div>
+
+        <div class="paragraph paragraphRight">
+          <span class="text textEmph">
+            <br />
+            <a class="link" href="files/documentation/perla_middleware.pdf" target="_blank">Download</a> the full middleware executive summary
+            <a class="link" href="files/documentation/perla_middleware.pdf" target="_blank"><img class="image" src="images/general/pdf_small.png" alt="" /></a>
+          </span>
+        </div>
+
+      <!-- FINE CONTENUTI -->
+      </div>
+      
+      <!-- INIZIO FOOTER -->
+      <div class="footer">
+      
+        <div class="footerMenu">
+          <ul class="footerMenuUl">
+                      
+            <!-- Contatti -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="contacts.html" target="_self">Contacts</a>
+            </li>
+            
+            <!-- Sponsor -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="relatedProjects.html" target="_self">Related Projects</a>
+            </li>
+            
+            <!-- W3C Valid -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="http://validator.w3.org/check?uri=http://perlawsn.sourceforge.net/middleware.html" target="_blank">Valid XHTML</a>
+            </li>
+            
+            <!-- CSS Valid -->
+            <li class="footerMenuLi">
+              <a class="footerMenuA" href="http://jigsaw.w3.org/css-validator/validator?uri=http://perlawsn.sourceforge.net/styles/styles.css" target="_blank">Valid CSS</a>
+            </li>
+                        
+          </ul>
+        </div>
+
+      <!-- FINE FOOTER -->
+      </div>
+    
+    <!-- FINE CONTAINER --> 
+    </div>
+  
+    
+  </body>
+</html>
+
